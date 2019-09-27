@@ -88,4 +88,10 @@ public class Snack
             System.out.printf("%s bought %d %s(s) for $%.2f.\n", customerName, amt, name, totalCost);
         }
     }
+
+    @Override
+    public String toString()
+    {
+        return String.format("name: %s\nQuantity: %d\nTotal cost: $%.2f\n", name, quantity, getTotalCost(quantity));
+    }
 }
