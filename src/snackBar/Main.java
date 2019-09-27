@@ -35,6 +35,11 @@ public class Main
         printMessage(snack3);
         customer2.buySnack(3, snack3);
         printMessage(customer2, snack3);
+        System.out.println("\n*** Final Snack Tally ***\n");
+        System.out.println(snack1);
+        System.out.println(snack2);
+        System.out.println(snack3);
+        System.out.println(snack4);
     }
 
     private static void printMessage(Customer customer)
