@@ -1,4 +1,4 @@
-package sanckBar;
+package snackBar;
 
 public class Customer
 {
@@ -15,5 +15,34 @@ public class Customer
         id = maxId;
         this.name = name;
         this.cash = cash;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public double getCash()
+    {
+        return cash;
+    }
+
+    public void addCash(double amt)
+    {
+        cash += amt;
+    }
+
+    public void buySnack(int amt, Snack snack)
+    {
+        if (snack.getQuantity() > amt) {
+            cash -= (snack.getCost() * amt);
+        }
+
+        snack.buySnack(amt, name);
     }
 }
